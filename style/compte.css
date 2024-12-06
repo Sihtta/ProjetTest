@@ -1,0 +1,124 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #1B1B1B;
+    color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.login-form, .factures-container, .signup-form {
+    background-color: #2A2A2A;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.login-form h2, .factures-container h2, .factures-container h3, .signup-form h2 {
+    color: #E5E5E5;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #9A9A9A;
+}
+
+.login-form input, .signup-form input, .signup-form select {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #1B1B1B;
+    color: #E5E5E5;
+    transition: box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.login-form input:focus, .signup-form input:focus, .signup-form select:focus {
+    outline: none;
+    border-color: #00C8A4;
+    box-shadow: 0 0 5px rgba(0, 200, 164, 0.5);
+}
+
+.login-form button, .signup-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00C8A4;
+    border: none;
+    color: #1B1B1B;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #00997E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-form .error, .signup-form .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #00C8A4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signup-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.signup-form form button {
+    grid-column: span 2; 
+}
+
+.signup-form .client-id {
+    grid-column: span 2;
+    background-color: #333;
+    color: #888;
+    pointer-events: none;
+}
+
+.login-form a {
+    display: block;
+    text-align: center;
+    color: #00C8A4;
+    margin-top: 10px;
+}
+
+.signup-form a {
+    display: block;
+    text-align: center;
+    color: #00C8A4;
+    margin-top: 10px;
+}
+
+button + a {
+    margin-top: 10px;
+}
+
+

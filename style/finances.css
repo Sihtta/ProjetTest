@@ -1,0 +1,325 @@
+/* Style général */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #272727; /* Ton sombre pour l'arrière-plan */
+    color: #E5E5E5; /* Gris clair pour le texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* En-tête */
+header.main-header {
+    padding: 20px;
+    color: #E5E5E5;
+    width: 100%;
+}
+
+header.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header .menu {
+    margin-top: 10px;
+}
+
+header .btn {
+    background-color: #00C8A4; /* Vert pour les boutons */
+    color: #1B1B1B;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 0 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+header .btn:hover {
+    background-color: #00997E; /* Vert plus foncé au survol */
+    transform: translateY(-3px);
+}
+
+header .btn.logout-btn {
+    background-color: #666;
+}
+
+header .btn.logout-btn:hover {
+    background-color: #555;
+}
+
+/* Conteneur de contenu */
+.container {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #313131; /* Fond gris foncé */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Le contenu reste au-dessus des bordures animées */
+    border-radius: 20px; /* Pour correspondre aux coins de la boîte */
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Suit les coins arrondis du conteneur */
+    background: 
+      linear-gradient(90deg, #00997E, rgba(0, 153, 126, 0.6)) 0% 0% / 100% 2px,
+      linear-gradient(180deg, #00997E, rgba(0, 153, 126, 0.6)) 100% 0% / 2px 100%,
+      linear-gradient(270deg, #00997E, rgba(0, 153, 126, 0.6)) 100% 100% / 100% 2px,
+      linear-gradient(360deg, #00997E, rgba(0, 153, 126, 0.6)) 0% 100% / 2px 100%;
+    background-repeat: no-repeat;
+    animation: animate-border 8s linear infinite;
+    z-index: 1; /* Derrière le contenu */
+  }
+  
+  @keyframes animate-border {
+    0% {
+      background-size: 0% 2px, 2px 0%, 0% 2px, 2px 0%;
+    }
+    25% {
+      background-size: 100% 2px, 2px 0%, 0% 2px, 2px 0%;
+    }
+    50% {
+      background-size: 100% 2px, 2px 100%, 0% 2px, 2px 0%;
+    }
+    75% {
+      background-size: 100% 2px, 2px 100%, 100% 2px, 2px 0%;
+    }
+    100% {
+      background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    }
+  }
+
+h2 {
+    color: #00C8A4; /* Texte accentué en vert */
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.comptes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.compte-card {
+    background-color: #1f1f1f; /* Fond des cartes */
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.compte-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 20px rgba(0, 153, 126, 0.4);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #E5E5E5;
+}
+
+.styled-table thead {
+    background-color: #444;
+    color: #E5E5E5;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #333;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #1B1B1B;
+}
+
+.styled-table tbody tr:nth-of-type(even):hover {
+    background-color: #1f1f1f;
+}
+
+.styled-table td:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.styled-table td:nth-child(2) {
+    padding-left: 20px;
+}
+
+.styled-table th:nth-child(3),
+.styled-table td:nth-child(3) {
+    width: 150px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-more {
+    background-color: #666;
+    color: #1B1B1B;
+    margin-right: 20px;
+}
+
+.btn-more:hover {
+    background-color: #555;
+}
+
+.btn-add {
+    background-color: #00C8A4;
+    color: #1B1B1B;
+}
+
+.btn-add:hover {
+    background-color: #00997E;
+}
+
+.btn-edit {
+    background-color: #444;
+    color: #E5E5E5;
+}
+
+.btn-edit:hover {
+    background-color: #555;
+}
+
+.btn-delete {
+    background-color: #E74C3C;
+    color: #E5E5E5;
+}
+
+.btn-delete:hover {
+    background-color: #C0392B;
+}
+
+.btn-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* Section formulaire */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #2A2A2A; /* Fond gris foncé */
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 153, 126, 0.6);
+    width: 25%;
+    max-width: 1000px;
+    margin-top: 30px;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    font-size: 1.4em;
+}
+
+input[type="text"] {
+    padding: 10px;
+    background-color: #1B1B1B;
+    color: #E5E5E5;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 60%;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus {
+    background-color: #333;
+    border-color: #00C8A4;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #00C8A4;
+    color: #1B1B1B;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 60%;
+    font-size: 0.8em;
+}
+
+button:hover {
+    background-color: #00997E;
+    transform: translateY(-3px);
+}
+
+.success {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+

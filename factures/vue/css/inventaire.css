@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #5528a7;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+label {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    text-align: right;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+input {
+    height: 1.5em;
+    border: 1px solid #ddd;
+    color: #000000;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+input[type=button] {
+    cursor: pointer;
+    background-color: #5528a7;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type=button]:hover {
+    background-color: #0000ff;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    background-color: #5528a7;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type=button].btnannuler {
+    background-color: #ff7000;
+}
+
+input[type=button].btnannuler:hover {
+    background-color: #ff4500;
+}
+
+input[type=button]:hover {
+    background-color: #4521a0;
+}
+
+input[type=button].btnretour {
+    background-color: #00ff00;
+}
+
+input[type=button].btnretour:hover {
+    background-color: #008000;
+}
+
+select {
+    border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1em;
+        box-sizing: border-box;
+        color: #000000;
+        cursor: pointer;
+}
+
+select option:hover {
+    background-color: #e0e0ff;
+}
+
+.labeltitre {
+    color: #ffffff;
+    background-color: #5528a7;
+    font-weight: bold;
+    padding: 0.4em 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.labelerreur {
+    color: red;
+    font-style: italic;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.divtitre {
+    background-color: #5528a7;
+    color: #ffffff;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.divaction {
+    margin: 10px;
+    float: right;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table,
+td,
+th {
+    padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+}
+
+td,
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+th {
+    background-color: #5528a7;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.img_visu {
+    width: 30px;
+    height: 30px;
+    background: no-repeat center url(../img/visu.png);
+    display: block;
+}
+
+.img_modification {
+    width: 30px;
+    height: 30px;
+    background: no-repeat center url(../img/modification.png);
+    display: block;
+}
+
+.img_corbeille {
+    width: 30px;
+    height: 30px;
+    background: no-repeat center url(../img/corbeille.png);
+    display: block
+}
+
+.btnRetour {
+    background-color: #0000ff;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    background-color: #5528a7;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#maj-catalogue {
+    background-color: white;
+    color: #5528a7;
+    border: 2px solid #5528a7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#maj-catalogue:hover {
+    background-color: #5528a7;
+    color: white;
+}
+
+.btn-action:hover {
+    background-color: #5528a7;
+    color: white;
+}
+
+.btn-action {
+    background-color: white;
+    color: #5528a7;
+    border: 2px solid #5528a7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.div-btn {
+    text-align: center; margin-top: 20px;
+}

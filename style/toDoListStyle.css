@@ -1,0 +1,104 @@
+body {
+    background-color: #1B1B1B; /* Fond sombre */
+    color: #E5E5E5; /* Texte clair */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00C8A4; /* Accent vert */
+    border-bottom: 2px solid #444; /* Gris sombre */
+    padding-bottom: 5px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.list-group-item {
+    transition: background-color 0.3s;
+    background-color: #2A2A2A; /* Gris foncé */
+    color: #E5E5E5; /* Texte clair */
+}
+
+.list-group-item:hover {
+    background-color: #444; /* Gris plus sombre */
+}
+
+.btn-primary {
+    background-color: #00C8A4; /* Vert principal */
+    border-color: #00C8A4;
+    color: #1B1B1B; /* Texte sombre */
+}
+
+.btn-primary:hover {
+    background-color: #00997E; /* Vert foncé */
+    color: #E5E5E5;
+}
+
+.btn-info {
+    background-color: #444; /* Gris pour boutons secondaires */
+    border-color: #444;
+    color: #E5E5E5;
+}
+
+.btn-info:hover {
+    background-color: #555; /* Gris plus clair */
+}
+
+.btn-danger {
+    background-color: #8E5A75; /* Rouge foncé légèrement adouci */
+    border-color: #8E5A75;
+    color: #E5E5E5;
+}
+
+.btn-danger:hover {
+    background-color: #77445E; /* Rouge foncé plus sombre */
+    border-color: #555; /* Gris */
+}
+
+input[type="text"].form-control {
+    background-color: #2A2A2A; /* Gris foncé */
+    border: 1px solid #444; /* Gris sombre */
+    color: #E5E5E5; /* Texte clair */
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"].form-control:focus {
+    background-color: #444; /* Gris plus clair */
+    border-color: #00C8A4; /* Accent vert */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 200, 164, 0.5); /* Effet lumineux vert */
+}
+
+.btn.menu {
+    display: inline-block;
+    padding: 6px 18px;
+    background-color: #00C8A4; /* Vert principal */
+    color: #1B1B1B; /* Texte sombre */
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.btn.menu:hover {
+    background-color: #00997E; 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn.menu:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.bg-custom-gray {
+    background-color: #464545; 
+}

@@ -1,0 +1,1021 @@
+
+/* Nav */
+
+:root {
+    --green : #00b894;
+    --white : #fcf2fa;
+    --black : rgba(0,0,0,0.93);
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px; 
+    display: none;
+  }
+  
+  .checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+  }
+
+  .checkbtn i:hover {
+    background: var(--black);
+  }
+
+  
+  /* responsive code */
+  @media (max-width: 952px) {
+    /* tablette mode */
+    
+    nav ul li a {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 858px) {
+    /* mobile mode */
+    .checkbtn {
+      display: block;
+    }
+    
+     .nav-links {
+      z-index: 1;
+      position: static;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: var(--black);
+      top: 15.9%;
+      left: -120%;
+      padding-top: 80px;
+      text-align: center;
+      transition: .5s ease;
+    }
+ 
+    nav .nav-links li a {
+      font-size: 18px;
+    }
+    
+    a.active, a:hover {
+      color: var(--green);
+      text-shadow: 0 10px 15px var(--green);
+    }
+
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+nav {
+    background-color:  #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    
+}
+      
+ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+      
+li {
+    margin-right: 35px;
+}
+    
+.logo {
+    color: #00b894;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.logo h5{
+   margin-left: 60%;
+   font-size: 22px;
+   margin-top: 20%;
+}
+
+    
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+ 
+}
+
+.button-1 {
+    background: #00b894;
+    border-radius: 999px;
+    box-shadow: #00b894 0 10px 20px -1wr0px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 850;
+    padding: 8px 30px; 
+    border: 0;
+    margin-right: 12px;
+}
+
+
+.l1 {
+    width: 100%;
+    height: 3px;
+    background:  #00b894;
+  }
+
+
+
+/* Fin Nav */
+
+/* Page Accueil */
+h1{
+    color: #FFF;
+    margin-top: 6%;
+    text-align: center;
+    font-size: 40px;
+    margin-left: -4%;
+}
+
+h2{
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 6%;
+    margin-left: 4%;
+}
+
+h3{
+    color: #00B894;
+    text-align: center;
+    font-size: 26px;
+}
+
+body{
+    background-color: #181818;
+}
+
+
+  .imagefond{
+    width: 600px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: start; 
+    text-align: center;
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    }
+    .imagefond:hover{
+    /* L'image est doublée */
+    -webkit-transform:scale(1.2); /* Safari et Chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    -o-transform:scale(1.2); /* Opera */ 
+    transform: scale(1.2); 
+    }
+    .sources button{
+        position: relative;
+        border: 2px solid white;
+        background: transparent;
+        font-size: 15px;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        margin-top: 5%;
+    }
+        
+    .sources button:hover{
+        background-color: white;
+    }
+    
+    .sources button:hover a{
+        color: black;
+    }
+
+
+/*Fin Page Accueil */
+
+
+
+/* Anim Jeux */
+
+    
+.animjeux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Urbanist', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.cards{
+    position: relative;
+    height: 500px;
+    width: 430px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.cards label{
+    position: absolute;
+    width: 430px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+    }
+
+.cards .card{
+    position: relative;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+    padding: 30px 35px;
+}
+
+.cards .image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .image img:hover{
+    transform: scale(1.05);
+}
+
+.cards .image .dots{
+    text-align: center;
+}
+
+.dots div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dots div:nth-child(1){
+    background-color: var(--current-color1);
+}
+
+.dots div:nth-child(2){
+    background-color: #5b85f9;
+}
+
+.dots div:nth-child(3){
+    background-color: #000;
+}
+
+.card .infos{
+    display: block;
+    text-align: end;
+    padding-top: 60px;
+}
+
+.card .infos span{
+    display: block;
+}
+
+.card .infos button{
+    position: relative;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 1em;
+    padding: 0.7em;
+    color: white;
+    cursor: pointer;
+    }
+    
+.card .infos button:hover{
+    background-color: white;
+    }
+
+.card .infos button:hover a{
+    color: black;
+    }
+.infos .name{
+    font-size: 30px;
+    color: var(--current-color1);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    padding-left: 25%;
+    transition: all .6s ease;
+}
+
+.card .btn-details:hover{
+    transform: scale(1.09);
+}
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #eceaed;
+    --currente-color2: #404457; 
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #eceaed;
+    --currente-color2: #404457; 
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5{
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 50%);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --currente-color2: #eceaed; 
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #eceaed;
+    --currente-color2: #404457; 
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #eceaed;
+    --currente-color2: #404457; 
+}
+
+
+@media (max-width: 858px) {
+    /* mobile mode */    
+    .container{
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        max-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    .cards{
+        position: relative;
+        height: 400px;
+        width: 200px;
+        perspective: 500px;
+        transform-style: preserve-3d;
+    }
+    
+    .cards label{
+        position: absolute;
+        width: 200px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 0.55s ease;
+        }
+
+    .cards .card{
+        position: relative;
+        height: 100%;
+        background-color: #323444;
+        border-radius: 10px;
+        padding: 30px 35px;
+    }
+    
+    .dots div{
+        width: 5px;
+        height: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .card .infos button a{
+        font-size: 15px;
+        }
+    .card .infos button{
+        padding: 6px 8px;
+        }
+        
+    .infos .name{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    .cards .image{
+        max-width: 85%;
+        max-height: 85%;
+        margin-bottom: -20px;
+    }
+
+    .cards .image img{
+        max-width: 90%;
+        max-height: 90%;
+    }
+    }
+/*Fin Anim jeux */
+
+
+/* Anim Consoles */
+
+.contient{
+    width: 100%;
+    background:  #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box{
+    width: 100px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(img/Nintendo64.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.8s;
+}
+
+.img-box:nth-child(2){
+    background: url(img/SegaMasterSystem.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(3){
+    background: url(img/atari.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(4){
+    background: url(img/NES.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(5){
+    background: url(img/playstationjpg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box h6{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    opacity: 0;
+    background: #00b894;
+    border-radius: 999px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 30px; 
+    border: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover{
+    width: 400px;
+    cursor: pointer;
+}
+
+.img-box:hover h6{
+    opacity: 1;
+    bottom: 25px;
+}
+@media (max-width: 858px) {
+    /* mobile mode */
+    .img-box{
+        width: 40px;
+        height: 220px;
+        margin: 6px;
+        border-radius: 50px;
+    }
+    
+    .img-box:hover{
+        width: 110px;
+        cursor: pointer;
+    }
+    
+    .img-box h6{
+        font-size: 10px;
+        padding: 4px 15px; 
+    }
+    .img-box:hover h6{
+        opacity: 1;
+        bottom: 25px;
+    }
+
+
+    .imagefond{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        max-height: 70%;
+        margin-bottom: 30%;
+    }
+
+    .imagefond img{
+        margin-top: 0;
+        margin-bottom: -15%;
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
+/* Fin Consoles */
+
+
+/* Page Jeu Du Mois */
+
+h7{
+    text-decoration: underline;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35px;
+}
+
+p{
+    color:white;
+    margin-left: 110px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.sonicfond{
+    width: 600px;
+    margin: auto;
+    margin-top: 4%;
+    justify-content: start; 
+    text-align: center;
+    /* La transition s'applique Ã  la fois sur la largeur et la hauteur, avec une durÃ©e d'une seconde. */
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+ 
+  }
+
+
+.sonicfond img{
+    margin-top: 5em;
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    }
+  .sonicfond img:hover{
+    /* L'image est doublée */
+    -webkit-transform:scale(1.2); /* Safari et Chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    -ms-transform:scale(1.2); /* Internet Explorer 9 */
+    -o-transform:scale(1.2); /* Opera */ 
+    transform: scale(1.2); 
+    }
+    @media (max-width: 858px) {
+        /* mobile mode */
+        .sonicfond{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 65%;
+            max-height: 65%;
+        }
+
+        .sonicfond img{
+            margin-top: 0;
+            margin-bottom: -15%;
+            max-width: 95%;
+            max-height: 95%;
+        }
+    } 
+.apropos p{
+
+    margin: 5% 5% 10% 5%;
+    text-align: center;
+}
+
+.apropos h3{
+    margin-top: 10%;
+}
+
+.wrapper {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #00b894;
+    color: white;
+    border-radius: 999px;
+    margin-top: 90%;
+    margin-bottom: 50%;
+    width: 110px;
+    height: 110px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -100%;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .wrapper .Abandonware:hover,
+  .wrapper .Abandonware:hover .tooltip,
+  .wrapper .Abandonware:hover .tooltip::before {
+    background: #1877F2;
+    color: #fff;
+  }
+  
+  .wrapper .Retrogaming:hover,
+  .wrapper .Retrogaming:hover .tooltip,
+  .wrapper .Retrogaming:hover .tooltip::before {
+    background: #c1d52f;
+    color: #fff;
+  }
+  
+  .wrapper .Retrogameplace:hover,
+  .wrapper .Retrogameplace:hover .tooltip,
+  .wrapper .Retrogameplace:hover .tooltip::before {
+    background: #E4405F;
+    color: #fff;
+  }
+
+  .site{
+    margin-right: 10%;
+  }
+  @media (max-width: 858px) {
+    /* mobile mode */
+    .wrapper .icon {
+        width: 90px;
+        height: 90px;
+        font-size: 12px;
+      }
+
+      .wrapper .Abandonware{
+        position: absolute;
+        margin-top: 20%;
+      }
+
+      .wrapper .Retrogaming{
+        position: absolute;
+        margin-top: 70%;
+      }
+
+      .wrapper .Retrogameplace{
+        margin-top: 420%;
+      }
+
+      .site{
+        margin-right: 0;
+      }
+    
+      
+     
+    
+   
+      
+    }
+  
+/*Fin Page Jeu Du Mois */
+
+
+/*Page Histoire */
+
+.texte_en_blanc {
+    color : white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    @media (max-width: 858px) {
+    /* mobile mode */
+        iframe{
+            max-width: 95%;
+        }
+    }
+/*Fin Page Histoire */
+
+
+
+/*Page Jeux */
+.H3_1 {
+    color: #00B894;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    margin-top: 120px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sectionjeux {
+    margin-top: 6%;
+    margin-bottom: 10%;
+}
+
+.Art_1, .Art_2 {
+    padding: 40px;
+ }
+
+ .Art_1 h2{
+    color: #00B894;
+    padding: 60px;
+    text-align: right;
+    font-size: 20px;
+    text-decoration: underline;
+    position: relative;
+    margin-right: 10%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Art_1 p {
+    position: relative;
+    text-align: right;
+    color: white;
+    margin-right: 8%;
+    margin-left: 50%;
+    margin-top: -15%;
+}
+.Art_1 img {
+    position: relative;
+    margin-left: 10%;
+    width: 20%;
+    height: 20%;
+}
+.Art_2 h2 {
+    color: #00B894;
+    padding: 60px;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: underline;
+    position: relative;
+    margin-right: 20%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Art_2 p{
+    position: relative;
+    text-align: left;
+    color: white;
+    margin-left: 8%;
+    margin-right: 50%;
+    margin-top: -15%;
+} 
+.Art_2 img {
+    position : relative;
+    margin-left: 70%;
+    width: 20%;
+    height: 20%;
+}
+.Art_1 img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.Art_1 img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.Art_2 img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.Art_2 img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.Art_1 h2 {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.Art_1 h2:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.Art_2 h2 {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.Art_2 h2:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@media (max-width: 858px) {
+    /* mobile mode */
+
+    .H3_1 {
+        font-size: 20px;
+        margin-top: 80px;
+    }
+
+    .sectionjeux {
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+
+ .Art_1, .Art_2 {
+        padding: 10px;
+
+ }
+
+.Art_1 h2, .Art_2 h2 {
+        font-size: 16px;
+        padding: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+
+}
+
+.Art_1 p, .Art_2 p {
+        margin-top: 10PX;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+ }
+
+ .Art_1 img, .Art_2 img {
+        width: 40%;
+        height: auto;
+        margin-left: 30%;
+        margin-bottom: 5%;
+}
+}
+
+/*Fin Page Jeux */
+
+  
+
+/* Page atari */
+
+
+.atari_img_graphe {
+    margin:auto;
+    justify-content: start;
+    text-align:center;
+    padding-top:10px;
+    position:relative;
+    width: 60%;
+    height: 60%;
+    padding-bottom:10px;
+}
+
+.atari_img_siege {
+    margin:auto;
+    justify-content: start;
+    text-align:center;
+    position:relative;
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.atari_img_graphe img:hover {
+    /* L'image est doublée */
+    -webkit-transform:scale(1); /* Safari et Chrome */
+    -moz-transform:scale(1); /* Firefox */
+    -ms-transform:scale(1); /* Internet Explorer 9 */
+    -o-transform:scale(1); /* Opera */ 
+    transform: scale(1); 
+    }
+
+.Art_atari img:hover{
+    /* L'image est doublée */
+    -webkit-transform:scale(1.3); /* Safari et Chrome */
+    -moz-transform:scale(1.3); /* Firefox */
+    -ms-transform:scale(1.3); /* Internet Explorer 9 */
+    -o-transform:scale(1.3); /* Opera */ 
+    transform: scale(1.3); 
+    }
+
+.titre_atari_sept{
+    margin-top: 5%;
+    margin-bottom:0px;
+}
+
+.atari_liste {
+    padding-top:5px;
+}
+
+.Art_atari a {
+    color: #00B894;
+}
+
+@media (max-width: 858px) {
+    /* mobile mode */
+    .atari_img_graphe {
+        width: 95%;
+        height: 95%;
+
+    }
+
+    .atari_img_siege {
+        width: 80%;
+        height: 80%;
+    }
+
+    p{
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    }
+

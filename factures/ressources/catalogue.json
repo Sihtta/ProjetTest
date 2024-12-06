@@ -1,0 +1,7 @@
+[
+    {"code": "AAA", "lib": "Lac Bleu", "type": "plate", "pays": "Suisse", "cond": "75", "tarif": "3.20"},
+    {"code": "HEALSIB", "tarif": "1222.75"},
+    {"code": "VOSSB", "tarif": "6.25"},
+    {"code": "MONTBRUN", "lib": "Montbrun", "type": "pétillante", "pays": "France", "cond": "100", "tarif": "2.80"},
+    {"suppr": ["PERRIER", "KONANIG", "TT"]}
+]
