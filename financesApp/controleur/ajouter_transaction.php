@@ -91,20 +91,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             const typeSelect = document.getElementById('type');
             const montantInput = document.getElementById('montant');
 
-            // Ne pas modifier le montant saisi, on garde sa valeur exacte
             let montant = parseFloat(montantInput.value);
 
             if (isNaN(montant)) {
-                montant = 0; // Assurer que la valeur n'est pas NaN
+                montant = 0;
             }
 
             if (typeSelect.value === 'dépense') {
-                montant = -Math.abs(montant); // Rendre le montant négatif pour les dépenses
+                montant = -Math.abs(montant);
             } else if (typeSelect.value === 'revenu') {
-                montant = Math.abs(montant); // Garder le montant positif pour les revenus
+                montant = Math.abs(montant);
             }
 
-            // Ne pas toucher à la valeur dans le champ, on laisse telle quelle
             montantInput.value = montant.toString();
         }
     </script>
