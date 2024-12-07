@@ -21,7 +21,6 @@ try {
 
     $id_client = $resultClient[0]['id_cli'];
 
-    // Requête pour récupérer les transactions, triées par date, avec jointure pour le nom de la catégorie
     $reqTransactions = "
         SELECT t.*, cb.libelle AS compte, c.nom AS categorie
         FROM transactions t

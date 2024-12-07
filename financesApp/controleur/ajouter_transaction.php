@@ -25,7 +25,6 @@ try {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-        // Vérification des champs obligatoires
         if (empty($_POST['type']) || empty($_POST['montant']) || empty($_POST['categorie']) || empty($_POST['compte']) || empty($_POST['date'])) {
             throw new Exception("Tous les champs sauf description doivent être remplis.");
         }
@@ -33,11 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $typeTransaction = $_POST['type'];
         $montant = $_POST['montant'];
         $categorie = $_POST['categorie'];
-        $description = $_POST['description']; // Description facultative
+        $description = $_POST['description'];
         $compteId = $_POST['compte'];
-        $dateTransaction = $_POST['date']; // Récupération de la date
+        $dateTransaction = $_POST['date'];
 
-        // Ajuster le montant si c'est une dépense
         if ($typeTransaction === 'dépense' && $montant > 0) {
             $montant = -$montant; // Rendre le montant négatif pour les dépenses
         }
@@ -55,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     VALUES (:type, :montant, :categorie, :date, :description, :id_compte)";
         $connexion->execSQL($reqInsertTransaction, [
             'type' => $typeTransaction,
-            'montant' => $montant,  // La valeur du montant est insérée sans modification
+            'montant' => $montant,
             'categorie' => $categorie,
             'date' => $dateTransaction,
             'description' => $description,

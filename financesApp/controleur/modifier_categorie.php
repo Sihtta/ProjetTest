@@ -50,7 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else {
     $idCategorie = $_GET['id'];
 
-    // Récupérer la catégorie à modifier
     $connexion = new Connexion();
     $reqCategorie = "SELECT * FROM categories WHERE id = :id";
     $resultCategorie = $connexion->execSQL($reqCategorie, ['id' => $idCategorie]);
