@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $idCategorie = $_POST['id'];
         $nomCategorie = $_POST['nom'];
 
-        // Récupérer l'id_client
+        // Récupération de l'id_client
         $reqClient = "SELECT id_cli FROM client WHERE login = :login";
         $resultClient = $connexion->execSQL($reqClient, ['login' => $login]);
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $id_client = $resultClient[0]['id_cli'];
 
-        // Vérifier si la catégorie existe
+        // Vérification de l'existence de la catégorie
         $reqCategorie = "SELECT * FROM categories WHERE id = :id AND id_client = :id_client";
         $resultCategorie = $connexion->execSQL($reqCategorie, ['id' => $idCategorie, 'id_client' => $id_client]);
 
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             throw new Exception("Catégorie introuvable.");
         }
 
-        // Mettre à jour la catégorie
+        // Mise à jour de la catégorie
         $reqUpdateCategorie = "UPDATE categories SET nom = :nom WHERE id = :id";
         $connexion->execSQL($reqUpdateCategorie, ['nom' => $nomCategorie, 'id' => $idCategorie]);
 
