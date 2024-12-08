@@ -27,7 +27,6 @@ try {
     $reqCategories = "SELECT * FROM categories WHERE id_client = :id_client";
     $categories = $connexion->execSQL($reqCategories, ['id_client' => $id_client]);
 
-    // Requête pour récupérer les transactions, triées par date, avec jointure pour le nom de la catégorie
     $reqTransactions = "
         SELECT t.*, cb.libelle AS compte, c.nom AS categorie
         FROM transactions t

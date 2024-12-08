@@ -34,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $reqInsertCategorie = "INSERT INTO categories (id_client, nom) VALUES (:id_client, :nom)";
         $connexion->execSQL($reqInsertCategorie, ['id_client' => $id_client, 'nom' => $nomCategorie]);
 
-        // Rediriger après ajout
         header("Location: ../controleur/list_categories.php?success=1");
         exit();
     } catch (Exception $e) {

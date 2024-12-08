@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['transaction_id']) && !empty($_POST['transaction_id'])) {
             $transactionId = $_POST['transaction_id'];
 
-            // Récupérer la transaction pour obtenir les informations nécessaires
             $reqTransaction = "SELECT montant, type, id_compte FROM transactions WHERE id = ?";
             $transaction = $connexion->execSQL($reqTransaction, [$transactionId]);
 
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $transaction = $transaction[0];
             $montant = $transaction['montant'];
-            $type = $transaction['type']; // "credit" ou "debit"
+            $type = $transaction['type'];
             $idCompte = $transaction['id_compte'];
 
             // Calculer l'ajustement du solde en fonction du type de la transaction
@@ -41,11 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $reqUpdateSolde = "UPDATE compte_bancaire SET solde = solde + ? WHERE id_compte = ?";
             $connexion->execSQL($reqUpdateSolde, [$ajustement, $idCompte]);
 
-            // Redirection avec un message de succès
             header("Location: ../controleur/list_transactions.php?success=1");
             exit();
         } else {
-            // Redirection avec un message d'erreur
             header("Location: ../controleur/list_transactions.php?error=Aucune transaction sélectionnée.");
             exit();
         }

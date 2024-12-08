@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dateTransaction = $_POST['date'];
 
         if ($typeTransaction === 'dépense' && $montant > 0) {
-            $montant = -$montant; // Rendre le montant négatif pour les dépenses
+            $montant = -$montant;
         }
 
         // Vérifier l'existence du compte bancaire de l'utilisateur

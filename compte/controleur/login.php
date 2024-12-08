@@ -9,13 +9,12 @@ $identifiants = [
     'password' => isset($_POST['password']) ? $_POST['password'] : ''
 ];
 
-// Fonction pour vérifier l'existence du client
 function existeCli(array $identifiants): bool
 {
     try {
         $connexion = new Connexion();
 
-        // Récupération du mot de passe hashé à partir de la table client
+        // Récupération du mot de passe à partir de la table client
         $req = "SELECT mot_de_passe FROM client WHERE login = :login";
         $resultat = $connexion->execSQL($req, ['login' => $identifiants['login']]);
 
@@ -23,7 +22,6 @@ function existeCli(array $identifiants): bool
             return false;
         }
 
-        // On prend le mot de passe stocké
         $stored_password = $resultat[0]['mot_de_passe'];
 
         // Vérification du mot de passe avec le hash
