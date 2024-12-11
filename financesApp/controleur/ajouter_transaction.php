@@ -33,13 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $typeTransaction = $_POST['type'];
         $montant = $_POST['montant'];
         $categorie = $_POST['categorie'];
-        $description = $_POST['description']; // Description facultative
+        $description = $_POST['description'];
         $compteId = $_POST['compte'];
-        $dateTransaction = $_POST['date']; // Récupération de la date
+        $dateTransaction = $_POST['date'];
 
         // Ajuster le montant si c'est une dépense
         if ($typeTransaction === 'dépense' && $montant > 0) {
-            $montant = -$montant; // Rendre le montant négatif pour les dépenses
+            $montant = -$montant;
         }
 
         // Vérifier l'existence du compte bancaire de l'utilisateur
@@ -55,17 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     VALUES (:type, :montant, :categorie, :date, :description, :id_compte)";
         $connexion->execSQL($reqInsertTransaction, [
             'type' => $typeTransaction,
-            'montant' => $montant,  // La valeur du montant est insérée sans modification
+            'montant' => $montant,
             'categorie' => $categorie,
             'date' => $dateTransaction,
             'description' => $description,
             'id_compte' => $compteId
         ]);
 
-        // Mise à jour du solde du compte
         $connexion->mettreAJourSolde($compteId);
 
-        // Rediriger après ajout
         header("Location: ../controleur/list_transactions.php?success=1");
         exit();
     } catch (Exception $e) {
@@ -91,20 +89,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             const typeSelect = document.getElementById('type');
             const montantInput = document.getElementById('montant');
 
-            // Ne pas modifier le montant saisi, on garde sa valeur exacte
             let montant = parseFloat(montantInput.value);
 
             if (isNaN(montant)) {
-                montant = 0; // Assurer que la valeur n'est pas NaN
+                montant = 0;
             }
 
             if (typeSelect.value === 'dépense') {
-                montant = -Math.abs(montant); // Rendre le montant négatif pour les dépenses
+                montant = -Math.abs(montant);
             } else if (typeSelect.value === 'revenu') {
-                montant = Math.abs(montant); // Garder le montant positif pour les revenus
+                montant = Math.abs(montant);
             }
 
-            // Ne pas toucher à la valeur dans le champ, on laisse telle quelle
             montantInput.value = montant.toString();
         }
     </script>
