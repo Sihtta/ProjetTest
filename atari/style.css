@@ -1104,14 +1104,6 @@ h7 {
     color: #e74c3c;
 }
 
-/* Section */
-section {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 
 article {
     margin-bottom: 30px;
@@ -1132,27 +1124,5 @@ ol li {
     margin-bottom: 15px;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    border: 2px solid #3498db;
-}
 
-/* Vidéo */
-iframe {
-    display: block;
-    margin: 20px auto;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-}
 
-/* Ligne décorative */
-.lignes .l1 {
-    height: 4px;
-    background: #3498db;
-    margin: 20px 0;
-}
