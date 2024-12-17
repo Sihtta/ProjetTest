@@ -379,8 +379,8 @@ section.start-animation .title{
     color: #ff00ee;
 }
 .about2 img{
-    height: 35rem;
-    width: 35rem;
+    height: 26rem;
+    width: 26rem;
 }
 
 .text-content2{
@@ -529,172 +529,158 @@ section.start-animation .column h2 {
 }
 
 
-/* skill-content */
-.wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5rem;
-    flex-wrap: wrap;
-}
-.skill-title{
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(-100px);
-}
-section.start-animation .skill-title{
-    animation: top 1s ease forwards;
-    animation-delay: 1.2s;
-}
-.skill-content{
-    width: 100%;
-    flex:  1 1 30rem;
-}
-.skill-box{
-    height: 100%;
-    width: 100%;
-    padding: 8rem 4rem;
-    background: rgba(255,255,255,.1);
-    border-radius: 1rem;
-}
-.skill-box1{
-    opacity: 0;
-    transform: translateX(-100px);
-}
-section.start-animation .skill-box1{
-    animation:  Right 1s ease forwards;
-    animation-delay: 1.2s;
-}
-.skill-box2{
-    opacity: 0;
-    transform: translateX(100px);
-}
-section.start-animation .skill-box2{
-    animation:Left 1s ease forwards;
-    animation-delay: 1.4s;
-}
-.single-skill{
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
-}
-.single-skill span{
-    font-size: 1.6rem;
+/* Skills Section */
+.skills {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #0f0a0a;
+    color: #fff;
 }
 
-.bar-side{
-    background: #111;
-    height: 1rem;
-    border-radius: 50rem;
-    position: relative;
-    overflow: hidden;
+.skills .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
-.bar{
-    position: absolute;
-    height: 100%;
-    background: #ff00ee;
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 3rem; 
+    justify-items: center;
+    align-items: center;
 }
-.bar-1{
-    width: 90%;
-}
-.bar-2{
-    width: 80%;
-}
-.bar-2-5{
-    width: 75%;
-}
-.bar-3{
-    width: 70%;
-}
-.bar-3{
-    width: 60%;
-}
-.bar-4{
-    width: 50%;
-}
-/* contact section */
-section form{
-    max-width: 70rem;
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: #ff00ee;
+    margin-bottom: 1rem;
+}
+
+/* Progress Circle */
+.progress-circle {
     margin: 1rem auto;
-    margin-bottom: 3rem;
-}
-.input-box{
+    width: 60px;
+    height: 60px;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-input:nth-child(1){
-    opacity: 0;
-    transform: translateX(-100px);
-}
-section.start-animation input:nth-child(1){
-    animation:Right 1s ease forwards;
-    animation-delay: 1.2s;
-}
-input:nth-child(2){
-    opacity: 0;
-    transform: translateX(100px);
-}
-section.start-animation input:nth-child(2){
-    animation:Left 1s ease forwards;
-    animation-delay: 1.2s;
-}
- input,textarea{
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 1.5rem;
-    background:rgba(255,255,255,.1);
-    border: .2rem solid rgba(255,255,255,.3);
-    outline: none;
-    backdrop-filter: blur(10px);
-    filter: drop-shadow(0 0 100px #ff00ee);
-    border-radius: .8rem;
-    gap: 2.5rem;
-    margin: .7rem 0;
-    transition: .3s ease;
-    opacity: 0;
-    transform: translateY(100px);
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ff00ee calc(var(--percentage) * 1%),
+        rgba(255, 255, 255, 0.3) calc(var(--percentage) * 1%) 
+    );
+    -webkit-mask: radial-gradient(circle, transparent 48%, black 50%);
+    mask: radial-gradient(circle, transparent 48%, black 50%);
 }
-section.start-animation textarea{
-    animation:Bottom 1s ease forwards;
-    animation-delay: 1.2s;
+
+.progress-circle::after {
+    content: attr(data-percentage) '%';
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    color: #fff;
 }
-input::placeholder{
-    font-size: 1.5rem;
-    letter-spacing: .02rem;
+
+
+/* Contact Section */
+.contact {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #0f0a0a;
+    color: #fff;
 }
-.input-box input{
-    width: 49%;
+
+.contact .title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
-input:focus,
-input:valid{
-    border: .2rem solid #ff00ee;
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-textarea:focus,
-textarea:valid{
-    border: .2rem solid #ff00ee;
+
+.input-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
-textarea{
+
+.input-box input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
     resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.contact .btn{
-    margin-top: 2rem;
-    cursor: pointer;
-    filter: none;
-    border: .2rem solid rgba(255,255,255,.3);
+
+input:focus,
+textarea:focus {
+    border-color: #ff00ee;
+    box-shadow: 0 0 8px rgba(255, 0, 238, 0.5);
 }
-section.start-animation .btn{
-    animation:Bottom 1s ease forwards;
-    animation-delay: 1.4s;
-}
-.contact .btn:hover{
+
+.btn2 {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
     background: #ff00ee;
-    box-shadow: 0 0 .3rem #ff00ee,
-    0 0 .7rem #ff00ee;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+.btn2:hover {
+    background: #ff33ff;
+    box-shadow: 0 4px 10px rgba(255, 0, 238, 0.5);
+}
+
+
 /* footer */
 
 footer{
