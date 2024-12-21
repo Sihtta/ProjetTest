@@ -465,9 +465,8 @@ section.start-animation .column:nth-child(2) {
     animation-delay: 1.2s;
 }
 
-/* Styling the headers in each column */
 .column h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 2rem 0 1rem 1.96rem;
     transform: translateY(-100px);
     opacity: 0;
@@ -478,7 +477,6 @@ section.start-animation .column h2 {
     animation-delay: 1.2s;
 }
 
-/* Box style for each content area */
 .box {
     border-left: .2rem solid #ff00ee;
 }
@@ -519,7 +517,7 @@ section.start-animation .column h2 {
 }
 
 .content h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     letter-spacing: .05rem;
     margin: .5rem 0;
 }
@@ -538,7 +536,7 @@ section.start-animation .column h2 {
 }
 
 .skills .title {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 2rem;
 }
 
@@ -568,9 +566,11 @@ section.start-animation .column h2 {
     font-size: 3rem;
     color: #ff00ee;
     margin-bottom: 1rem;
+    fill: #ff00ee; 
+    display: block; 
 }
 
-/* Progress Circle */
+
 .progress-circle {
     margin: 1rem auto;
     width: 60px;
@@ -636,8 +636,8 @@ section.start-animation .column h2 {
 
 .input-box input {
     flex: 1;
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
@@ -648,7 +648,7 @@ section.start-animation .column h2 {
 textarea {
     width: 100%;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
@@ -665,14 +665,15 @@ textarea:focus {
 
 .btn2 {
     display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
     color: #fff;
     background: #ff00ee;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 0.8rem;
 }
 
 .btn2:hover {
