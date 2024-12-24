@@ -41,6 +41,12 @@ html{
     opacity: 0;
     animation: RightSlide 1s ease forwards;
 }
+.success-message {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 @keyframes  RightSlide{
     0%{
         transform: translateX(-100%);
@@ -760,9 +766,8 @@ footer i{
     .home .text-content h1{
         font-size: 4rem;
     }
-    
-   
 }
+
 @media(max-width:450px){
     html{
         font-size: 50%;
