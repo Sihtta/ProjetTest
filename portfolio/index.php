@@ -36,7 +36,7 @@
                 web development internship from April 7 to May 30, 2025, to apply the knowledge gained in programming.</p>
             <div class="btn-section">
                 <button class="btn">Contact me</button>
-                <button class="btn">Download my CV</button>
+                <a href="cv.pdf" class="btn" download="Matthis_Pourcelot_CV.pdf">Download my CV</a>
             </div>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/matthis-pourcelot-15b1a22b6/" target="_blank">
